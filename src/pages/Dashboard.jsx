@@ -50,9 +50,9 @@ export const Dashboard = () => {
                 Type
               </th>
               <th className="px-6 py-3 bg-[blue] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider border">
-                <button className="bg-[white] text-black py-4 px-6 border rounded">
+                {/* <button className="bg-[white] text-black py-4 px-6 border rounded">
                   Process
-                </button>
+                </button> */}
               </th>
             </tr>
           </thead>
