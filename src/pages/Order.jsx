@@ -2,9 +2,9 @@ import React from "react";
 
 const Order = () => {
   return (
-    <div className="w-10/12 mx-auto">
+    <div className="w-11/12 mx-auto">
       <div className="flex justify-between mt-8">
-        <p>Order</p>
+        <p className="text-2xl">Order</p>
         <p className="mt-8 border p-2">
           <select>
             <option>Ongoing Orders</option>

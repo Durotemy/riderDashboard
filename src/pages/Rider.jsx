@@ -19,14 +19,16 @@ const Rider = () => {
             <Modal closeModal={closeModal} />
           </div>
         )}
-        <p className="text-2xl">Riders</p>
-        <div className="mt-12">
-          <button
-            className="bg-[blue] h-[50px] w-[130px]  text-white rounded"
-            onClick={OpenModal}
-          >
-            Add Riders
-          </button>
+        <div className="mt-8 w-full">
+          <p className="text-2xl">Riders</p>
+          <div className="mt-12 flex justify-end">
+            <button
+              className="bg-[blue] h-[50px] w-[130px]  text-white rounded"
+              onClick={OpenModal}
+            >
+              Add Riders
+            </button>
+          </div>
         </div>
       </div>
 

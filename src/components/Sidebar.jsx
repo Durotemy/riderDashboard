@@ -42,14 +42,14 @@ const Sidebar = () => {
               Settings
             </a>
           </li>
-          <li className="px-4 py-4 cursor-pointer flex gap-4">
+          {/* <li className="px-4 py-4 cursor-pointer flex gap-4">
             <div>
               <FiSettings className="text-4xl" color="white" />
             </div>
             <a href="/orderprocessing" className=" text-2xl">
               OrderProcessing
             </a>
-          </li>
+          </li> */}
         </ul>
       </nav>
     </div>
