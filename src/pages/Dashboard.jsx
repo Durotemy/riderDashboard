@@ -36,7 +36,7 @@ export const Dashboard = () => {
         <p className="font-bold">Pending</p>
         <table className="min-w-full divide-y divide-gray-200 mt-4">
           <thead>
-            <tr>
+            <tr className="py-8">
               <th className="px-6 py-3 bg-[blue] text-left text-xs leading-4 font-medium text-white uppercase tracking-wider border">
                 Pick up
               </th>
@@ -53,6 +53,9 @@ export const Dashboard = () => {
                 {/* <button className="bg-[white] text-black py-4 px-6 border rounded">
                   Process
                 </button> */}
+                <p className=" py-4 px-">
+                    Status
+                </p>
               </th>
             </tr>
           </thead>
