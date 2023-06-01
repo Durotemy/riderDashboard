@@ -10,7 +10,7 @@ const OrderProcessing = () => {
             <p className=" py-3 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
               Rider Name
             </p>
-            <p>Emmanuel</p>
+            <p className="font-bold text-[green]">Emmanuel</p>
           </div>
           <div className="flex flex-col">
             <p className=" py-3 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
@@ -25,18 +25,18 @@ const OrderProcessing = () => {
             <p>51 doe street asaba</p>
           </div>
           <div>
-            <button className="bg-[green] h-[40px] w-[100px] rounded shadow">Assign</button>
+            <button className="bg-[green] h-[40px] w-[100px] rounded shadow text-white font-bold">Assign</button>
           </div>
         </div>
       </div>
-      <div className=" flex flex-col mt-4">
-        <p className="text-left ml-24 text-[green] font-bold">Chepest</p>
+      <div className=" flex flex-col mt-8">
+        <p className="text-left ml-24 text-[green] font-bold">Cheapest</p>
         <div className="shadow-lg bg-[white] flex justify-between items-center h-[100px] w-10/12 p-10 mx-auto border rounded">
           <div className="flex flex-col">
             <p className=" py-3 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
               Rider Name
             </p>
-            <p>Emmanuel</p>
+            <p className="font-bold text-[green]">Emmanuel</p>
           </div>
           <div className="flex flex-col">
             <p className=" py-3 text-left text-xs leading-4 font-medium text-gray-500 uppercase tracking-wider">
@@ -51,11 +51,11 @@ const OrderProcessing = () => {
             <p>51 doe street asaba</p>
           </div>
           <div>
-            <button className="bg-[green] h-[40px] w-[100px] rounded shadow">Assign</button>
+            <button className="bg-[green] h-[40px] w-[100px] rounded shadow text-white font-bold">Assign</button>
           </div>
         </div>
       </div>
-      <div className=" flex flex-col mt-4">
+      <div className=" flex flex-col mt-8">
         <p className="text-left ml-24 text-[green] font-bold">Custom</p>
         <div className="shadow-lg bg-[white] flex justify-between items-center h-[100px] w-10/12 p-10 mx-auto border rounded">
           <div className="flex flex-col">
@@ -82,7 +82,7 @@ const OrderProcessing = () => {
             <p>51 doe street asaba</p>
           </div>
           <div>
-            <button className="bg-[green] h-[40px] w-[100px] rounded shadow">Assign</button>
+            <button className="bg-[green] h-[40px] w-[100px] rounded shadow text-white font-bold">Assign</button>
           </div>
         </div>
       </div>

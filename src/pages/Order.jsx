@@ -1,14 +1,39 @@
-import React from "react";
+import React, { useState } from "react";
+import { IoMdNotificationsOutline } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 const Order = () => {
+  const navigate = useNavigate();
+  const [selectedOption, setSelectedOption] = useState("");
+
+  const handleOptionChange = (event) => {
+    const selectedValue = event.target.value;
+    setSelectedOption(selectedValue);
+
+    // Perform any additional logic based on the selected option
+    // Navigate to the desired page based on the selected option
+    if (selectedValue === "Ongoing Orders") {
+      navigate("/order");
+    } else if (selectedValue === "Unpending Orders") {
+      navigate("/unpending-orders");
+    }
+  };
+
+  // const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/orderprocessing");
+  };
   return (
     <div className="w-11/12 mx-auto">
       <div className="flex justify-between mt-8">
-        <p className="text-2xl">Order</p>
-        <p className="mt-8 border p-2">
-          <select>
-            <option>Ongoing Orders</option>
-            <option>Unpending Orders</option>
+        <p className="text-2xl">Orders</p>
+        <p className="mt-8 border p-2 flex rounded">
+          <div className="">
+            <IoMdNotificationsOutline className="text-2xl" color="black" />
+          </div>
+          <select value={selectedOption} onChange={handleOptionChange}>
+            <option value="Ongoing Orders">Ongoing Orders</option>
+            <option value="Unpending Orders">Unpending Orders</option>
           </select>
         </p>
       </div>
@@ -16,39 +41,94 @@ const Order = () => {
       <table className="min-w-full divide-y divide-gray-200 mt-4">
         <thead className="">
           <tr className="">
-            <th className="px-6 py-6 bg-[blue] text-left text-xs leading-4 font-lg text-white uppercase tracking-wider border">
+            <th className="px-6 py-6 bg-[#0080FF]  text-xs leading-4 font-lg text-white uppercase tracking-wider border">
               Pick up Address
             </th>
-            <th className="px-6 py-6 bg-[blue] text-left text-xs leading-4 font-lg text-white uppercase tracking-wider border">
+            <th className="px-6 py-6 bg-[#0080FF]  text-xs leading-4 font-lg text-white uppercase tracking-wider border">
               Delivery Address
             </th>
-            <th className="px-6 py-6 bg-[blue] text-left text-xs leading-4 font-lg text-white uppercase tracking-wider border">
+            <th className="px-6 py-6 bg-[#0080FF]  text-xs leading-4 font-lg text-white uppercase tracking-wider border">
               Type
             </th>
-            <th className="px-6 py-6 bg-[blue] text-left text-xs leading-4 font-lg text-white uppercase tracking-wider border">
+            <th className="px-6 py-6 bg-[#0080FF]  text-xs leading-4 font-lg text-white uppercase tracking-wider border">
               Due Date
             </th>
-            <th className="px-6 py-6 bg-[blue] text-left text-xs leading-4 font-lg text-white uppercase tracking-wider border">
-              <p>State</p>
-            </th>
+            <th className="px-6 py-6 bg-[#0080FF]  text-xs leading-4 font-lg text-white uppercase tracking-wider border"></th>
           </tr>
         </thead>
         <tbody className="bg-white divide-y divide-gray-200  border border-gray-300 border-solid rounded-lg p-4">
           <tr>
-            <td className="px-6 py-4 whitespace-no-wrap border">Lagos</td>
-            <td className="px-6 py-4 whitespace-no-wrap border">Ibadan</td>
-            <td className="px-6 py-4 whitespace-no-wrap border">Urgent</td>
-            <td className="px-6 py-4 whitespace-no-wrap border">
-              Febuary 2022
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              10 yaba Lagos
             </td>
-            <td className="px-6 py-4 whitespace-no-wrap">Pending</td>
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              2a Louis Solomon CL, Lagos
+            </td>
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              Urgent
+            </td>
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              2022-07-09
+            </td>
+            <td className="px-6 py-4 whitespace-no-wrap text-center">
+              <button
+                className="text-center p-3 bg-[#0080FF] text-white rounded "
+                onClick={handleClick}
+              >
+                Process
+              </button>{" "}
+              {/* <p className="text-[orange]">Ongoing</p> */}
+            </td>
           </tr>
           <tr>
-            <td className="px-6 py-4 whitespace-no-wrap border">Kenya</td>
-            <td className="px-6 py-4 whitespace-no-wrap border">Nigeria</td>
-            <td className="px-6 py-4 whitespace-no-wrap border">Emergency</td>
-            <td className="px-6 py-4 whitespace-no-wrap border">March 2021</td>
-            <td className="px-6 py-4 whitespace-no-wrap border">Pending</td>
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              {" "}
+              10 yaba Lagos
+            </td>
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              {" "}
+              2a Louis Solomon CL, Lagos
+            </td>
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              Emergency
+            </td>
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              2022-07-09
+            </td>
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              {/* <p className="text-[green]">Completed</p> */}
+              <button
+                className="text-center p-3 bg-[#0080FF] text-white rounded"
+                onClick={handleClick}
+              >
+                Process
+              </button>{" "}
+            </td>
+          </tr>
+          <tr>
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              {" "}
+              10 yaba Lagos
+            </td>
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              {" "}
+              2a Louis Solomon CL, Lagos
+            </td>
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              Emergency
+            </td>
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              2022-07-09
+            </td>
+            <td className="px-6 py-4 whitespace-no-wrap border text-center">
+              {/* <p className="text-[#0080FF]">Delivered</p> */}
+              <button
+                className="text-center p-3 bg-[#0080FF] text-white rounded"
+                onClick={handleClick}
+              >
+                Process
+              </button>{" "}
+            </td>
           </tr>
 
           {/* I can add more table rows here */}
